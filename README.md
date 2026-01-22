@@ -1,77 +1,79 @@
-Add to Cart Application using React Router
-Overview
+🛒 Add to Cart Application (React + Router)
+📌 Project Overview
 
-This project is a single-page e-commerce cart application developed using ReactJS, React Router, and Context API.
-It demonstrates product listing, cart management, dynamic pricing, and route-based navigation using modern React best practices.
+This project is a ReactJS Add to Cart application built using React Router and Context API.
+It fetches product data from the Fake Store API, displays products on a dedicated products page, and allows users to add/remove items from a cart with quantity management and price calculations.
 
-The application consumes data from the Fake Store API and allows users to add, remove, and manage products within a shopping cart while dynamically calculating prices and discounts.
+The application demonstrates state management, routing, and clean component-based architecture.
 
-Objectives
+🚀 Features
+✅ Product Page
 
-Implement product and cart functionality using React
-
-Manage global cart state using Context API
-
-Enable seamless navigation using React Router
-
-Perform real-time price calculations with discounts
-
-Write clean, readable, and maintainable code
-
-Key Features
-Product Listing
-
-Products fetched from Fake Store API
-
-Responsive grid layout using Tailwind CSS
-
-Displays product image, title, description, and price
-
-Add to Cart / Remove from Cart toggle based on cart state
-
-Cart Management
-
-Centralized cart state using Context API
-
-Quantity increase and decrease per item
-
-Automatic removal prevention below quantity of 1
-
-Item-wise total calculation
-
-Dynamic cart total updates
-
-Pricing & Discount
+Fetches products from Fake Store API
 
 Displays:
 
-Total cart price
+Product Image
 
-10% discount
+Title
 
-Final payable amount
+Description
 
-Real-time price recalculation on quantity change
+Price
 
-Routing
+Responsive grid layout using Tailwind CSS
+
+“Add to Cart” button
+
+If product already exists in cart → shows Remove from Cart
+
+✅ Cart Page
+
+Displays all added cart items
+
+Each cart item includes:
+
+Product title
+
+Price
+
+Quantity
+
+Increase / Decrease quantity buttons
+
+Remove from Cart button
+
+Item-wise total price (price × quantity)
+
+Cart summary:
+
+Total Price
+
+10% Discount
+
+Final Price after discount
+
+Prices update dynamically based on quantity
+
+✅ Navigation & Routing
 
 React Router used for navigation
 
-Routes implemented:
+Routes:
 
-/ → Products Page
+/ → Products page
 
-/cart → Cart Page
+/cart → Cart page
 
-Persistent navigation bar with cart count indicator
+Navbar with cart count indicator
 
-Technology Stack
+🧑‍💻 Tech Stack Used
 
 ReactJS
 
 React Router DOM
 
-Context API
+Context API (Global Cart State)
 
 Tailwind CSS
 
@@ -81,7 +83,7 @@ Axios
 
 Fake Store API
 
-Project Structure
+📂 Project Folder Structure
 src/
 │
 ├── components/
@@ -98,27 +100,51 @@ src/
 ├── App.jsx
 └── main.jsx
 
-Application Architecture
+🔄 Application Flow
 
-Component-based architecture for reusability
+Products Page
 
-Context API for global cart state
+Products fetched using Axios from Fake Store API
 
-Separation of concerns between UI, logic, and routing
+Each product rendered using ProductCard
 
-Declarative routing using React Router
+Add or remove items using Context state
 
-Data Source
+Cart Context
 
-Fake Store API
+Stores cart items globally
 
-https://fakestoreapi.com/products
+Handles:
 
-Price Calculation Logic
+Add to cart
+
+Remove from cart
+
+Increase / decrease quantity
+
+Cart Page
+
+Reads cart data from Context
+
+Calculates:
+
+Total price
+
+Discount (10%)
+
+Final payable amount
+
+Navbar
+
+Displays cart item count
+
+Enables navigation between pages
+
+🧮 Price Calculation Logic
 
 Item Total
 
-Item Price × Quantity
+item.price × item.qty
 
 
 Cart Total
@@ -128,63 +154,59 @@ Sum of all item totals
 
 Discount
 
-10% of cart total
+10% of total price
 
 
 Final Price
 
-Total − Discount
+total - discount
 
+🌐 API Used
 
-All calculations are updated dynamically based on cart changes.
+Fake Store API
 
-Installation & Setup
-Prerequisites
+https://fakestoreapi.com/products
 
-Node.js (v16 or above)
-
-npm or yarn
-
-Steps to Run
-# Clone repository
+▶️ How to Run the Project
+1️⃣ Clone the Repository
 git clone <repository-url>
-
-# Navigate to project folder
 cd add-to-cart-app
 
-# Install dependencies
+2️⃣ Install Dependencies
 npm install
 
-# Start development server
+3️⃣ Start Development Server
 npm run dev
 
-
-Access the application at:
-
+4️⃣ Open in Browser
 http://localhost:5173
 
-Best Practices Followed
+📌 Key Concepts Implemented
 
-Clean and readable code structure
+React Hooks (useState, useEffect, useContext)
 
-Reusable components
+Context API for global state management
 
-Centralized state management
+React Router for page navigation
 
 Conditional rendering
 
-Responsive UI design
+Dynamic price calculations
 
-Proper folder organization
+Clean and reusable components
 
-Possible Enhancements
+🎯 Future Enhancements (Optional)
 
-Persist cart data using localStorage
+Persist cart data using Local Storage
 
-Add product search and filters
+Add loading and error states
 
-Implement checkout flow
+Product search and filtering
 
-Add loading and error handling
+Checkout page
 
 User authentication
+
+👨‍💻 Author
+
+Kanesha K
