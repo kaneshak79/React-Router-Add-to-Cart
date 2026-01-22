@@ -145,9 +145,6 @@ Checkout page
 
 User authentication
 
-Author
-
-Kanesha K
 👨‍💻 Author
 
-Kanesha K make it little short
+Kanesha K 
