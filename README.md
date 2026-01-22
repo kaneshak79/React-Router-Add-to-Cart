@@ -73,23 +73,6 @@ Axios
 
 Fake Store API
 
-📂 Project Folder Structure
-src/
-│
-├── components/
-│   ├── Navbar.jsx
-│   └── ProductCard.jsx
-│
-├── Context/
-│   └── CartContext.jsx
-│
-├── Pages/
-│   ├── Products.jsx
-│   └── Cart.jsx
-│
-├── App.jsx
-└── main.jsx
-
 🔄 Application Flow
 
 Products Page:
@@ -111,27 +94,6 @@ Total price,Discount (10%) and Final payable amount
 Navbar
 
 Displays cart item count and Enables navigation between pages
-
-🧮 Price Calculation Logic
-
-Item Total
-
-item.price × item.qty
-
-
-Cart Total
-
-Sum of all item totals
-
-
-Discount
-
-10% of total price
-
-
-Final Price
-
-total - discount
 
 🌐 API Used
 
