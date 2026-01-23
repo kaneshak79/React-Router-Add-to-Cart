@@ -2,7 +2,7 @@ import React from 'react'
 import { HashRouter,Routes,Route, BrowserRouter } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Products from './Pages/Products'
-import Cart from './Pages/cart'
+import Cart from './Pages/Cart'
 import { CartProvider } from './Context/CartContext'
 
 function App() {
